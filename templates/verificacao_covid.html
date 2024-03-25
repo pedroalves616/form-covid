@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de COVID-19</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Verificação de COVID-19</h2>
+    <form action="/verificar_covid" method="POST">
+        <label for="tosse">Você está tossindo?</label><br>
+        <input type="radio" id="tosse_sim" name="tosse" value="sim">
+        <label for="tosse_sim">Sim</label>
+        <input type="radio" id="tosse_nao" name="tosse" value="nao">
+        <label for="tosse_nao">Não</label><br><br>
+
+        <label for="febre">Você está com febre?</label><br>
+        <input type="radio" id="febre_sim" name="febre" value="sim">
+        <label for="febre_sim">Sim</label>
+        <input type="radio" id="febre_nao" name="febre" value="nao">
+        <label for="febre_nao">Não</label><br><br>
+
+        <label for="falta_ar">Você está com falta de ar?</label><br>
+        <input type="radio" id="falta_ar_sim" name="falta_ar" value="sim">
+        <label for="falta_ar_sim">Sim</label>
+        <input type="radio" id="falta_ar_nao" name="falta_ar" value="nao">
+        <label for="falta_ar_nao">Não</label><br><br>
+
+        <input type="submit" value="Verificar">
+    </form>
+</body>
+</html>
